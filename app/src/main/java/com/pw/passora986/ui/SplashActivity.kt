@@ -1,0 +1,56 @@
+package com.pw.passora986.ui
+
+import android.content.Intent
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.pw.passora986.MainActivity
+import com.pw.passora986.R
+import com.pw.passora986.databinding.ActivitySplashBinding
+import com.pw.passora986.utils.AppPreferences
+import com.pw.passora986.utils.PreferenceKeys
+
+class SplashActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySplashBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        Handler(Looper.getMainLooper()).postDelayed({
+
+            if (AppPreferences.contains(PreferenceKeys.USER_PIN)) {
+
+                startActivity(Intent(this, MainActivity::class.java))
+
+            } else {
+
+                startActivity(
+                    Intent(this, PinActivity::class.java).apply {
+                        putExtra(
+                            PinActivity.EXTRA_MODE,
+                            PinActivity.MODE_CREATE
+                        )
+                    }
+                )
+
+            }
+
+            finish()
+
+        },1500)
+    }
+}
