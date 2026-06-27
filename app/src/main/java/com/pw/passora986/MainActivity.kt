@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.pw.passora986.adapter.PasswordAdapter
 import com.pw.passora986.databinding.ActivityMainBinding
 import com.pw.passora986.db.PasswordViewModel
@@ -100,10 +101,10 @@ class MainActivity : AppCompatActivity() {
 
         showPinDialog {
 
-            AlertDialog.Builder(this)
+            MaterialAlertDialogBuilder(this)
                 .setTitle(password.website)
-                .setMessage(password.password) // Later AESHelper.decrypt(...)
-                .setPositiveButton("OK", null)
+                .setMessage(password.password)
+                .setPositiveButton("Close", null)
                 .show()
 
         }
@@ -306,24 +307,19 @@ class MainActivity : AppCompatActivity() {
 
     ) {
 
-        AlertDialog.Builder(this)
-
+        MaterialAlertDialogBuilder(this)
             .setTitle("Delete Password")
-
-            .setMessage("Are you sure?")
-
+            .setMessage("Are you sure you want to delete this password?")
             .setPositiveButton("Delete") { _, _ ->
 
                 viewModel.delete(password)
 
             }
+            .setNegativeButton("Cancel") { _, position ->
 
-            .setNegativeButton("Cancel") { _, _ ->
-
-                adapter.notifyDataSetChanged()
+                adapter.notifyItemChanged(position)
 
             }
-
             .show()
 
     }
@@ -332,7 +328,7 @@ class MainActivity : AppCompatActivity() {
         onSuccess: () -> Unit
     ) {
 
-        val builder = AlertDialog.Builder(this)
+        val builder = MaterialAlertDialogBuilder(this)
 
         val view = layoutInflater.inflate(
             R.layout.dialog_verify_pin,

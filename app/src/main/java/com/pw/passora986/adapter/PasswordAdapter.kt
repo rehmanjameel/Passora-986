@@ -58,11 +58,11 @@ class PasswordAdapter(
             txtUsername.text = item.username
 
             // Always blur password
-            txtPassword.text = "••••••••••"
-//            holder.binding.txtPassword.text = item.password
+//            txtPassword.text = "••••••••••"
+            holder.binding.txtPassword.text = item.password
 
             blurText(holder.binding.txtPassword)
-            txtCategory.text = item.category
+            chipCategory.text = item.category
 
             txtDate.text = formatDate(item.updatedAt)
 

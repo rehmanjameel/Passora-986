@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/background"
+    android:background="@drawable/circle_button"
     android:id="@+id/main"
     android:orientation="vertical"
     tools:context=".ui.SettingsActivity">
@@ -16,7 +16,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primary"
+        android:background="@drawable/circle_button"
         app:navigationIcon="@drawable/outline_arrow_back_24"
         app:navigationIconTint="@android:color/white"
         app:title="Settings"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="Security"
-                android:textColor="@color/primary"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -56,13 +56,14 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:background="@color/dark_grey"
                     android:padding="16dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/outline_lock_24"
-                        android:tint="@color/primary" />
+                        app:tint="@color/grey" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -70,14 +71,14 @@
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
                         android:text="Change PIN"
-                        android:textColor="@color/textPrimary"
+                        android:textColor="@color/grey"
                         android:textSize="16sp" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/outline_keyboard_arrow_right_24"
-                        app:tint="@color/textSecondary" />
+                        app:tint="@color/grey" />
 
                 </LinearLayout>
 
@@ -91,7 +92,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="10dp"
                 android:text="Application"
-                android:textColor="@color/primary"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -107,13 +108,14 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:background="@color/dark_grey"
                     android:padding="16dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/outline_security_24"
-                        app:tint="@color/primary" />
+                        app:tint="@color/grey" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -121,14 +123,14 @@
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
                         android:text="Privacy Policy"
-                        android:textColor="@color/textPrimary"
+                        android:textColor="@color/grey"
                         android:textSize="16sp" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/outline_keyboard_arrow_right_24"
-                        app:tint="@color/textSecondary" />
+                        app:tint="@color/grey" />
 
                 </LinearLayout>
 
@@ -146,13 +148,14 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:background="@color/dark_grey"
                     android:padding="16dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/outline_share_24"
-                        app:tint="@color/primary" />
+                        app:tint="@color/grey" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -160,14 +163,14 @@
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
                         android:text="Share App"
-                        android:textColor="@color/textPrimary"
+                        android:textColor="@color/grey"
                         android:textSize="16sp" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/outline_keyboard_arrow_right_24"
-                        app:tint="@color/textSecondary" />
+                        app:tint="@color/grey" />
 
                 </LinearLayout>
 
@@ -185,13 +188,14 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:background="@color/dark_grey"
                     android:padding="16dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/outline_star_24"
-                        app:tint="@color/primary" />
+                        app:tint="@color/grey" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -199,14 +203,14 @@
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
                         android:text="Rate App"
-                        android:textColor="@color/textPrimary"
+                        android:textColor="@color/grey"
                         android:textSize="16sp" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/outline_keyboard_arrow_right_24"
-                        app:tint="@color/textSecondary" />
+                        app:tint="@color/grey" />
 
                 </LinearLayout>
 
@@ -223,13 +227,14 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:background="@color/dark_grey"
                     android:padding="16dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/outline_info_24"
-                        app:tint="@color/primary" />
+                        app:tint="@color/grey" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -237,14 +242,14 @@
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
                         android:text="About"
-                        android:textColor="@color/textPrimary"
+                        android:textColor="@color/grey"
                         android:textSize="16sp" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@drawable/outline_keyboard_arrow_right_24"
-                        app:tint="@color/textSecondary" />
+                        app:tint="@color/grey" />
 
                 </LinearLayout>
 
@@ -258,8 +263,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:gravity="center"
-                android:text="Version 1.0.0"
-                android:textColor="@color/textSecondary"
+                android:text="Version 1.0.1"
+                android:textColor="@color/dark_grey"
                 android:textSize="14sp" />
 
         </LinearLayout>

@@ -112,7 +112,7 @@ class SettingsActivity : AppCompatActivity() {
         // Privacy Policy
         binding.cardPrivacy.setOnClickListener {
 
-            val url = "https://sites.google.com/view/ermsolftsolution/privacy-policy"
+            val url = ""
 
             startActivity(
 

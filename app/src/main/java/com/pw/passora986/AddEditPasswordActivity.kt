@@ -1,5 +1,6 @@
 package com.pw.passora986
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
@@ -7,11 +8,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.pw.passora986.databinding.ActivityAddEditPasswordBinding
 import com.pw.passora986.db.PasswordViewModel
 import com.pw.passora986.models.PasswordEntity
+import com.pw.passora986.ui.PinActivity
+import com.pw.passora986.utils.AppPreferences
+import com.pw.passora986.utils.PreferenceKeys
 import kotlinx.coroutines.launch
 import java.security.SecureRandom
 
@@ -39,6 +44,12 @@ class AddEditPasswordActivity : AppCompatActivity() {
         "Other"
     )
 
+    companion object {
+
+        private const val REQUEST_CREATE_PIN = 101
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -50,6 +61,7 @@ class AddEditPasswordActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        WindowCompat.setDecorFitsSystemWindows(window, true)
 
         // Get password id
         passwordId = intent.getIntExtra(
@@ -102,13 +114,18 @@ class AddEditPasswordActivity : AppCompatActivity() {
 
             this,
 
-            android.R.layout.simple_spinner_dropdown_item,
+            R.layout.item_dropdown,
 
             categories
 
         )
 
-        binding.spCategory.adapter = adapter
+        binding.spCategory.setAdapter(adapter)
+
+        binding.spCategory.setText(
+            categories[0],
+            false
+        )
 
     }
 
@@ -139,16 +156,10 @@ class AddEditPasswordActivity : AppCompatActivity() {
                 binding.cbFavorite.isChecked =
                     it.isFavorite
 
-                val position =
-                    categories.indexOf(it.category)
-
-                if (position != -1) {
-
-                    binding.spCategory.setSelection(
-                        position
-                    )
-
-                }
+                binding.spCategory.setText(
+                    it.category,
+                    false
+                )
 
             }
 
@@ -173,7 +184,10 @@ class AddEditPasswordActivity : AppCompatActivity() {
 
         binding.btnSave.setOnClickListener {
 
-            savePassword()
+            if (!validate())
+                return@setOnClickListener
+
+            checkPinAndSave()
 
         }
 
@@ -246,6 +260,33 @@ class AddEditPasswordActivity : AppCompatActivity() {
 
     }
 
+    private fun checkPinAndSave() {
+
+        val savedPin = AppPreferences.getString(
+            PreferenceKeys.USER_PIN
+        )
+
+        if (savedPin.isEmpty()) {
+
+            startActivityForResult(
+
+                Intent(
+                    this,
+                    PinActivity::class.java
+                ),
+
+                REQUEST_CREATE_PIN
+
+            )
+
+        } else {
+
+            savePassword()
+
+        }
+
+    }
+
     /**
      * Save / Update Password
      */
@@ -264,7 +305,8 @@ class AddEditPasswordActivity : AppCompatActivity() {
 
         val notes = binding.edtNotes.text.toString().trim()
 
-        val category = binding.spCategory.selectedItem.toString()
+        val category =
+            binding.spCategory.text.toString()
 
         val favorite = binding.cbFavorite.isChecked
 
@@ -339,6 +381,29 @@ class AddEditPasswordActivity : AppCompatActivity() {
         }
 
         finish()
+
+    }
+
+    @Suppress("DEPRECATION")
+    override fun onActivityResult(
+        requestCode: Int,
+        resultCode: Int,
+        data: Intent?
+    ) {
+
+        super.onActivityResult(
+            requestCode,
+            resultCode,
+            data
+        )
+
+        if (requestCode == REQUEST_CREATE_PIN &&
+            resultCode == RESULT_OK
+        ) {
+
+            savePassword()
+
+        }
 
     }
 

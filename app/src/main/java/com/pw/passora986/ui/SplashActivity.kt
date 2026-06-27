@@ -32,25 +32,15 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
 
-            if (AppPreferences.contains(PreferenceKeys.USER_PIN)) {
-
-                startActivity(Intent(this, MainActivity::class.java))
-
-            } else {
-
-                startActivity(
-                    Intent(this, PinActivity::class.java).apply {
-                        putExtra(
-                            PinActivity.EXTRA_MODE,
-                            PinActivity.MODE_CREATE
-                        )
-                    }
+            startActivity(
+                Intent(
+                    this,
+                    MainActivity::class.java
                 )
-
-            }
+            )
 
             finish()
 
-        },1500)
+        }, 1500)
     }
 }
