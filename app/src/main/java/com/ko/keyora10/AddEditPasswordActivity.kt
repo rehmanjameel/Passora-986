@@ -1,4 +1,4 @@
-package com.pw.passora986
+package com.ko.keyora10
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,12 +11,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.pw.passora986.databinding.ActivityAddEditPasswordBinding
-import com.pw.passora986.db.PasswordViewModel
-import com.pw.passora986.models.PasswordEntity
-import com.pw.passora986.ui.PinActivity
-import com.pw.passora986.utils.AppPreferences
-import com.pw.passora986.utils.PreferenceKeys
+import com.ko.keyora10.databinding.ActivityAddEditPasswordBinding
+import com.ko.keyora10.db.PasswordViewModel
+import com.ko.keyora10.models.PasswordEntity
+import com.ko.keyora10.ui.PinActivity
+import com.ko.keyora10.utils.AppPreferences
+import com.ko.keyora10.utils.PreferenceKeys
 import kotlinx.coroutines.launch
 import java.security.SecureRandom
 

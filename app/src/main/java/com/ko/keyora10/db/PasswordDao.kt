@@ -1,8 +1,8 @@
-package com.pw.passora986.db
+package com.ko.keyora10.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.pw.passora986.models.PasswordEntity
+import com.ko.keyora10.models.PasswordEntity
 
 /**
  * DAO class for Password CRUD operations

@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.pw.passora986"
+    namespace = "com.ko.keyora10"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.pw.passora986"
+        applicationId = "com.ko.keyora10"
         minSdk = 24
         targetSdk = 37
         versionCode = 1

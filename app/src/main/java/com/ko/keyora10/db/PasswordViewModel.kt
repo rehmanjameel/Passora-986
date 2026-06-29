@@ -1,9 +1,9 @@
-package com.pw.passora986.db
+package com.ko.keyora10.db
 
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.pw.passora986.models.PasswordEntity
+import com.ko.keyora10.models.PasswordEntity
 import kotlinx.coroutines.launch
 
 /**

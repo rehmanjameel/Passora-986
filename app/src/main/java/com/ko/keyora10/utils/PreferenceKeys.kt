@@ -1,4 +1,4 @@
-package com.pw.passora986.utils
+package com.ko.keyora10.utils
 
 object PreferenceKeys {
 

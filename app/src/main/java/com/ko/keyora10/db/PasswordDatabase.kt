@@ -1,11 +1,11 @@
-package com.pw.passora986.db
+package com.ko.keyora10.db
 
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.pw.passora986.models.PasswordEntity
+import com.ko.keyora10.models.PasswordEntity
 
 /**
  * Room Database

@@ -1,4 +1,4 @@
-package com.pw.passora986.ui
+package com.ko.keyora10.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.pw.passora986.MainActivity
-import com.pw.passora986.R
-import com.pw.passora986.databinding.ActivitySplashBinding
-import com.pw.passora986.utils.AppPreferences
-import com.pw.passora986.utils.PreferenceKeys
+import com.ko.keyora10.MainActivity
+import com.ko.keyora10.R
+import com.ko.keyora10.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding

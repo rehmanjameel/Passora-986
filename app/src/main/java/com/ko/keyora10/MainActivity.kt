@@ -1,4 +1,4 @@
-package com.pw.passora986
+package com.ko.keyora10
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -9,7 +9,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
@@ -18,14 +17,14 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.pw.passora986.adapter.PasswordAdapter
-import com.pw.passora986.databinding.ActivityMainBinding
-import com.pw.passora986.db.PasswordViewModel
-import com.pw.passora986.models.PasswordEntity
-import com.pw.passora986.ui.SettingsActivity
-import com.pw.passora986.utils.AppPreferences
-import com.pw.passora986.utils.HashUtils
-import com.pw.passora986.utils.PreferenceKeys
+import com.ko.keyora10.adapter.PasswordAdapter
+import com.ko.keyora10.databinding.ActivityMainBinding
+import com.ko.keyora10.db.PasswordViewModel
+import com.ko.keyora10.models.PasswordEntity
+import com.ko.keyora10.ui.SettingsActivity
+import com.ko.keyora10.utils.AppPreferences
+import com.ko.keyora10.utils.HashUtils
+import com.ko.keyora10.utils.PreferenceKeys
 
 class MainActivity : AppCompatActivity() {
 

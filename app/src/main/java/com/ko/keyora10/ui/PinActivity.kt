@@ -1,18 +1,16 @@
-package com.pw.passora986.ui
+package com.ko.keyora10.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.pw.passora986.MainActivity
-import com.pw.passora986.R
-import com.pw.passora986.databinding.ActivityPinBinding
-import com.pw.passora986.utils.AppPreferences
-import com.pw.passora986.utils.HashUtils
-import com.pw.passora986.utils.PreferenceKeys
+import com.ko.keyora10.R
+import com.ko.keyora10.databinding.ActivityPinBinding
+import com.ko.keyora10.utils.AppPreferences
+import com.ko.keyora10.utils.HashUtils
+import com.ko.keyora10.utils.PreferenceKeys
 
 class PinActivity : AppCompatActivity() {
 

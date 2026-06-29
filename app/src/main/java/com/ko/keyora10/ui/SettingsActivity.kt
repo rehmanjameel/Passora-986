@@ -1,4 +1,4 @@
-package com.pw.passora986.ui
+package com.ko.keyora10.ui
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -10,8 +10,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.pw.passora986.R
-import com.pw.passora986.databinding.ActivitySettingsBinding
+import com.ko.keyora10.R
+import com.ko.keyora10.databinding.ActivitySettingsBinding
 
 class SettingsActivity : AppCompatActivity() {
 

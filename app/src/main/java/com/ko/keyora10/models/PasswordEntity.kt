@@ -1,4 +1,4 @@
-package com.pw.passora986.models
+package com.ko.keyora10.models
 
 
 import androidx.room.Entity

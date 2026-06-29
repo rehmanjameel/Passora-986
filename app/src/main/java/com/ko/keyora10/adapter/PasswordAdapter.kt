@@ -1,4 +1,4 @@
-package com.pw.passora986.adapter
+package com.ko.keyora10.adapter
 
 import android.graphics.BlurMaskFilter
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.pw.passora986.databinding.ItemPasswordBinding
-import com.pw.passora986.models.PasswordEntity
+import com.ko.keyora10.databinding.ItemPasswordBinding
+import com.ko.keyora10.models.PasswordEntity
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
