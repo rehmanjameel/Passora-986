@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Passora986"
+rootProject.name = "Keyora_10"
 include(":app")

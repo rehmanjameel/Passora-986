@@ -240,13 +240,13 @@ class AddEditPasswordActivity : AppCompatActivity() {
 
         }
 
-        if (binding.edtUsername.text.toString().trim().isEmpty()) {
-
-            binding.edtUsername.error = "Required"
-
-            return false
-
-        }
+//        if (binding.edtUsername.text.toString().trim().isEmpty()) {
+//
+//            binding.edtUsername.error = "Required"
+//
+//            return false
+//
+//        }
 
         if (binding.edtPassword.text.toString().trim().isEmpty()) {
 

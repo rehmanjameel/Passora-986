@@ -77,7 +77,7 @@ class SettingsActivity : AppCompatActivity() {
 
         } catch (e: Exception) {
 
-            binding.txtVersion.text = "Version 1.0"
+            binding.txtVersion.text = "Version 1.0.1"
 
         }
 
@@ -112,7 +112,7 @@ class SettingsActivity : AppCompatActivity() {
         // Privacy Policy
         binding.cardPrivacy.setOnClickListener {
 
-            val url = ""
+            val url = "https://docs.google.com/document/d/1RlRqS-7kjGwk7sHYAxWqm3UbtirXDEzAwd2NAoCS4PU/edit?usp=sharing"
 
             startActivity(
 
@@ -136,7 +136,7 @@ class SettingsActivity : AppCompatActivity() {
 
                 Intent.EXTRA_SUBJECT,
 
-                "Passora986"
+                getString(R.string.app_name)
 
             )
 
@@ -144,7 +144,7 @@ class SettingsActivity : AppCompatActivity() {
 
                 Intent.EXTRA_TEXT,
 
-                "Check out Passora986 Password Manager.\n\n" +
+                "Check out ${getString(R.string.app_name)} Password Manager.\n\n" +
                         "https://play.google.com/store/apps/details?id=$packageName"
 
             )
@@ -222,11 +222,11 @@ class SettingsActivity : AppCompatActivity() {
 
         AlertDialog.Builder(this)
 
-            .setTitle("Passora986")
+            .setTitle(getString(R.string.app_name))
 
             .setMessage(
 
-                "Passora986 is a secure offline password manager.\n\n" +
+                "${getString(R.string.app_name)} is a secure offline password manager.\n\n" +
 
                         "• Store passwords locally\n" +
 
@@ -236,7 +236,7 @@ class SettingsActivity : AppCompatActivity() {
 
                         "• No Internet Required\n\n" +
 
-                        "Version 1.0"
+                        "Version 1.0.1"
 
             )
 

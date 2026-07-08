@@ -33,7 +33,7 @@ abstract class PasswordDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     PasswordDatabase::class.java,
-                    "passora986_database"
+                    "app_database"
                 )
                     .fallbackToDestructiveMigration()
                     .build()
